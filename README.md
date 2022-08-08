@@ -6,21 +6,21 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 ## Play Turtle Commands
 
-* <a href="#forward">`Forward`</a>
-* <a href="#back">`Back`</a>
-* <a href="#right">`Right`</a>
-* <a href="#left">`Left`</a>
-* <a href="#speed">`Speed`</a>
-* <a href="#width">`Width`</a>
-* <a href="#shape">`Shape`</a>
-* <a href="#square">`Square`</a>
-* <a href="#circle">`Circle`</a>
-* <a href="#color">`Color`</a>
-* <a href="#hide">`Hide `</a>
-* <a href="#show">`Show`</a>
-* <a href="#begin-fill">`Begin fill`</a>
-* <a href="#end-fill">`End fill`</a>
-* <a href="#bgcolor">`Bgcolor`</a>
+* [`Forward`](#forward)
+* [`Back`](#back)
+* [`Right`](#right)
+* [`Left`](#left)
+* [`Speed`](#speed)
+* [`Width`](#width)
+* [`Shape`](#shape)
+* [`Square`](#square)
+* [`Circle`](#circle)
+* [`Color`](#color)
+* [`Hide`](#hide)
+* [`Show`](#show)
+* [`Begin fill`](#begin-fill)
+* [`End fill`](#end-fill)
+* [`Bgcolor`](#bgcolor)
 
 
 ### Forward
