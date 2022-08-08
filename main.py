@@ -18,8 +18,8 @@ env = {
 	'square': lambda x: square(float(x)),
 	'circle': lambda x: circle(float(x)),
 	'color': lambda x: color(x),
-	'hide': lambda x: bob.ht(),
-	'show': lambda x: bob.st(),
+	'hide': lambda: bob.ht(),
+	'show': lambda: bob.st(),
 	'begin': lambda x: bob.begin_fill(),
 	'end': lambda x: bob.end_fill(),
 	'bgcolor': lambda x: screen.bgcolor(x),
@@ -86,7 +86,7 @@ def color(color_str):
 
 
 root = tk.Tk()
-root.title("Turtle Code")
+root.title("Play Turtle")
 root.resizable(False, False)
 root.iconphoto(True, tk.PhotoImage(file='turtle.png'))
 
@@ -104,7 +104,5 @@ bob = turtle.RawTurtle(screen, shape="turtle")
 
 run = ttk.Button(root, text="Run", command=run_code, width=30)
 run.pack()
-
-root.bind("<Control-Enter>", run_code)
 
 root.mainloop()
