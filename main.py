@@ -20,8 +20,8 @@ env = {
 	'color': lambda x: color(x),
 	'hide': lambda: bob.ht(),
 	'show': lambda: bob.st(),
-	'begin': lambda x: bob.begin_fill(),
-	'end': lambda x: bob.end_fill(),
+	'begin-fill': lambda: bob.begin_fill(),
+	'end-fill': lambda: bob.end_fill(),
 	'bgcolor': lambda x: screen.bgcolor(x),
 }
 
@@ -68,10 +68,13 @@ def run_code():
 				except ValueError:
 					command(env.get(func[1]))
 			except IndexError:
-				showerror(
-					"Missing Argument",
-					f"It appears that an argument is missing in {func[0]!r}",
-				)
+				if func[0] in ("hide", "show", "begin-fill", "end-fill"):
+					command()
+				else:
+					showerror(
+						"Missing Argument",
+						f"It appears that an argument is missing in {func[0]!r}",
+					)
 
 def square(size):
 	for i in range(4):
