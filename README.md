@@ -7,7 +7,6 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 ## Play Turtle Commands
 
 * <a href="#forward">`Forward`</a>
-* <a href="#forward">`Forward`</a>
 * <a href="#back">`Back`</a>
 * <a href="#right">`Right`</a>
 * <a href="#left">`Left`</a>
