@@ -6,28 +6,32 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 ## Play Turtle Commands
 
-* [`Forward`](#forward)
-* [`Back`](#back)
-* [`Right`](#right)
-* [`Left`](#left)
-* [`Speed`](#speed)
-* [`Width`](#width)
-* [`Shape`](#shape)
-* [`Square`](#square)
-* [`Circle`](#circle)
-* [`Color`](#color)
-* [`Hide`](#hide)
-* [`Show`](#show)
-* [`Begin fill`](#begin-fill)
-* [`End fill`](#end-fill)
-* [`Bgcolor`](#bgcolor)
+* <a href="#forward">`Forward`</a>
+* <a href="#forward">`Forward`</a>
+* <a href="#back">`Back`</a>
+* <a href="#right">`Right`</a>
+* <a href="#left">`Left`</a>
+* <a href="#speed">`Speed`</a>
+* <a href="#width">`Width`</a>
+* <a href="#shape">`Shape`</a>
+* <a href="#square">`Square`</a>
+* <a href="#circle">`Circle`</a>
+* <a href="#color">`Color`</a>
+* <a href="#hide">`Hide `</a>
+* <a href="#show">`Show`</a>
+* <a href="#begin-fill">`Begin fill`</a>
+* <a href="#end-fill">`End fill`</a>
+* <a href="#bgcolor">`Bgcolor`</a>
 
 
 ### Forward
 
-* Syntax: `forward amount`
-* Shortcuts: `fd amount`
-* The `forward` command draws a line `amount` pixels in the direction the turtle is currently facing
+* Syntax
+    * Command: `forward`
+    * Parameters: `amount`
+* What it does
+    * The `forward` command moves the turtle on the screen, drawing a line behind it.
+    * The `amount` parameter tells the turtle how far to move
 
 ### Back
 
