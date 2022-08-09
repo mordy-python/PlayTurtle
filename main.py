@@ -1,14 +1,17 @@
 import turtle
 import tkinter as tk
 from tkinter import END, ttk
-from tkinter.messagebox import showerror
+from tkinter.messagebox import showerror, showinfo
 from tkinter.filedialog import askopenfile, asksaveasfile
 from typing import List
 
+
 class App:
 	def __init__(self) -> None:
-		self.root = tk.Tk()
 		self.title_str = "Play Turtle"
+		self.filename = None
+
+		self.root = tk.Tk()
 		self.root.title(self.title_str)
 		self.root.iconphoto(True, tk.PhotoImage(file="turtle.png"))
 
@@ -17,7 +20,7 @@ class App:
 
 		self.filemenu = tk.Menu(self.menubar, tearoff=False)
 		self.filemenu.add_command(label="Open", command=self.open_file)
-		self.filemenu.add_command(label="Save")
+		self.filemenu.add_command(label="Save", command=self.save)
 		self.filemenu.add_command(label="Save As", command=self.save_file)
 		self.filemenu.add_separator()
 		self.filemenu.add_command(label="Exit", command=self.root.quit)
@@ -37,10 +40,15 @@ class App:
 		self.screen.bgcolor("cyan")
 
 		self.code = tk.Text(self.root, width=30, height=40)
+		self.root.bind("<Control-o>", lambda e: self.open_file())
+		self.root.bind("<Control-s>", lambda e: self.save())
+		self.root.bind("<Control-S>", lambda e: self.save_file())
+		self.root.bind("<Control-Return>", lambda e: self.run_code())
+		self.code.bind("<KeyPress>", self.key_press)
 		self.code.pack()
-		
+
 		self.bob = turtle.RawTurtle(self.screen, shape="turtle")
-		
+
 		self.run = ttk.Button(self.root, text="Run", command=self.run_code, width=30)
 		self.run.pack()
 
@@ -74,7 +82,7 @@ class App:
 
 	def color(self, color_str):
 		self.bob.color(color_str)
-	
+
 	def circle(self, radius):
 		self.bob.circle(radius)
 
@@ -88,7 +96,7 @@ class App:
 
 	def run_code(self):
 		self.bob.reset()
-		lines = self.code.get('1.0', END).strip().split('\n')
+		lines = self.code.get("1.0", END).strip().split("\n")
 		for line in lines:
 			func: List[str] = line.split()
 			if len(func) == 0 or func[0].startswith("#"):
@@ -103,7 +111,7 @@ class App:
 				times = func[1].strip("times")
 				times = self.env.get(times, times)
 				commands = " ".join(func[2:])
-				commands = commands.split(';')
+				commands = commands.split(";")
 				for idx, _ in enumerate(commands):
 					commands[idx] = commands.strip()
 				for _ in range(int(times)):
@@ -115,7 +123,9 @@ class App:
 				continue
 			command = self.env.get(func[0])
 			if command == None:
-				showerror(f"{func[0]!r} Not Found", message=f"{func[0]!r} was not found")
+				showerror(
+					f"{func[0]!r} Not Found", message=f"{func[0]!r} was not found"
+				)
 			else:
 				try:
 					command(self.env.get(func[1], func[1]))
@@ -125,22 +135,47 @@ class App:
 					else:
 						showerror(
 							"Missing Argument",
-							f"It appears that {func[0]!r} is missing a parameter"
+							f"It appears that {func[0]!r} is missing a parameter",
 						)
 
 	def open_file(self):
-		file = askopenfile('r', filetypes =[('Python Files', '*.py')], initialdir=".")
-		self.root.title(f"{self.title_str} - {file.name}")
+		file = askopenfile(
+			"r",
+			filetypes=[("Play Turtle Files", "*.pty"), ("All Files", "*.*")],
+			initialdir=".",
+		)
+		self.filename = file.name
+		self.root.title(f"{self.title_str} - {self.filename}")
 		code_ = file.read()
 		file.close()
-		self.code.delete('1.0', END)
-		self.code.insert('1.0', code_)
+		self.code.delete("1.0", END)
+		self.code.insert("1.0", code_)
+
+	def save(self):
+		if self.filename:
+			with open(self.filename, "w") as file:
+				file.write(self.code.get("1.0", END))
+			self.root.title(f"{self.title_str} - {self.filename}")
+		else:
+			self.save_file()
 
 	def save_file(self):
-		save_to = asksaveasfile(mode='w', filetypes =[('Python Files', '*.py')])
-		self.root.title(f"{self.title_str} - {save_to.name}")
-		save_to.write(self.code.get('1.0', END))
+		save_to = asksaveasfile(
+			mode="w",
+			filetypes=[("Play Turtle Files", "*.pty"), ("All Files", "*.*")],
+			defaultextension=".pty",
+			initialdir=".",
+		)
+		self.filename = save_to.name
+		self.root.title(f"{self.title_str} - {self.filename}")
+		save_to.write(self.code.get("1.0", END))
 		save_to.close()
+
+	def key_press(self, event: tk.Event):
+		if self.filename:
+			self.root.title(f"{self.title_str} - {self.filename} *")
+		else:
+			self.root.title(f"{self.title_str} *")
 
 
 app = App()
