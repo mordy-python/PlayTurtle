@@ -1,7 +1,23 @@
+from tkinter import messagebox
 import turtle
 import tkinter as tk
-from tkinter import END, ttk
+from tkinter import END, TOP, ttk
 from tkinter.messagebox import showerror
+from tkinter.filedialog import askopenfile, asksaveasfile
+
+def open_file():
+	file = askopenfile('r', filetypes =[('Python Files', '*.py')], initialdir=".")
+	root.title(f"Play Turtle - {file.name}")
+	code_ = file.read()
+	file.close()
+	code.delete('1.0', END)
+	code.insert('1.0', code_)
+
+def save_file():
+	save_to = asksaveasfile(mode='w', filetypes =[('Python Files', '*.py')])
+	root.title(f"Play Turtle - {save_to.name}")
+	save_to.write(code.get('1.0', END))
+	save_to.close()
 
 env = {
 	"forward": lambda x: bob.fd(float(x)),
@@ -98,6 +114,24 @@ root = tk.Tk()
 root.title("Play Turtle")
 root.resizable(False, False)
 root.iconphoto(True, tk.PhotoImage(file="turtle.png"))
+
+menubar = tk.Menu(root, tearoff=False)
+root.config(menu=menubar)
+
+filemenu = tk.Menu(menubar, tearoff=False)
+filemenu.add_command(label="Open", command=open_file)
+filemenu.add_command(label="Save")
+filemenu.add_command(label="Save As", command=save_file)
+filemenu.add_separator()
+filemenu.add_command(label="Exit", command=root.quit)
+
+helpmenu = tk.Menu(menubar, tearoff=False)
+helpmenu.add_command(label="Help")
+helpmenu.add_command(label="About")
+
+menubar.add_cascade(label="File", menu=filemenu)
+menubar.add_cascade(label="Help", menu=helpmenu)
+
 
 canvas = tk.Canvas(root)
 canvas.config(width=800, height=700)
