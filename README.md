@@ -27,43 +27,69 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 * Syntax
     * Command: `forward`
-    * Parameters: `amount`
+    * Parameters: `distance`
 * What it does
     * The `forward` command moves the turtle on the screen, drawing a line behind it.
-    * The `amount` parameter tells the turtle how far to move
+    * The `distance` parameter tells the turtle how far to move.
 
 ### Back
 
-* Syntax: `back amount`
-* Shortcuts: `bk amount`
-* The `back` command draws a line `amount` pixels in the opposite direction the turtle is currently facing
+* Syntax
+    * Command: `back`
+    * Parameters: `distance`
+* What it does
+    * The `back` command moves the turtle backward on the screen, drawing a line in front of it.
+    * The `distance` parameter tells the turtle how far to move.
 
 ### Right
 
-* Syntax: `right degrees`
-* Shortcuts: `rt degrees`
-* The `right` command rotates the turtle `degrees` degrees to the right
+* Syntax
+    * Command: `right`
+    * Parameters: `degrees`
+* What it does
+    * The `right` command turns the turtle right.
+    * The `degrees` parameter tells the turtle how many degrees to rotate.
 
 ### Left
 
-* Syntax: `left degrees`
-* Shortcuts: `lt degrees`
-* The `left` command rotates the turtle `degrees` degress to the left
+* Syntax
+    * Command: `left`
+    * Parameters: `degrees`
+* What it does
+    * The `left` command turns the turtle left.
+    * The `degrees` parameter tells the turtle how many degrees to rotate.
+
 
 ### Speed
 
-* Syntax: `speed new-speed`
-* The `speed` command changes the turtles speed. If `new-speed` is `0`, then there will be no animation, everything is drawn before being rendered. If `new-speed` is between `1` and `10`, then, the higher the number, the faster the turtle moves.
+* Syntax
+    * Command: `speed`
+    * Parameters: `new-speed`
+* What it does
+    * The `speed` command sets the turtles drawing speed.
+    * The `new-speed` parameter tells the turtle how fast it should move.
+
 
 ### Width
 
-* Syntax: `width new-width`
-* The `width` command changes the thickness of the line drawn by the turtle to `new-width` pixels.
+* Syntax
+    * Command: `width`
+    * Parameters: `new-width`
+* What it does
+    * The `width` command sets the turtles width (in pixels).
+    * The `new-width` parameter specifies what the new width of the turtle should be.
+
 
 ### Shape
 
-* Syntax: `shape turtle-shape`
-* The `shape` command chnages the shape of the turtle displayed on screen. `turtle-shape` must be one of `arrow`, `turtle`, `circle`, `square`, `triangle`, or `classic`.
+* Syntax
+    * Command: `shape`
+    * Parameters: `new-shape`
+* What it does
+    * The `shape` command changes the turtle's shape.
+    * The `new-shape` parameter specifies what shape should be displayed.
+    > Note: The `new-shape` parameter can only be on of the following: arrow, circle, turtle, square, triangle, classic
+
 
 ### Square
 
