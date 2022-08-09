@@ -81,7 +81,7 @@ def run_code():
 
 
 def square(size):
-	for i in range(4):
+	for _ in range(4):
 		bob.fd(size)
 		bob.rt(90)
 
@@ -100,13 +100,13 @@ root.resizable(False, False)
 root.iconphoto(True, tk.PhotoImage(file="turtle.png"))
 
 canvas = tk.Canvas(root)
-canvas.config(width=500, height=500)
+canvas.config(width=800, height=700)
 canvas.pack(side=tk.RIGHT)
 
 screen = turtle.TurtleScreen(canvas)
 screen.bgcolor("cyan")
 
-code = tk.Text(root, width=30, height=25)
+code = tk.Text(root, width=30, height=40)
 code.pack()
 
 bob = turtle.RawTurtle(screen, shape="turtle")
