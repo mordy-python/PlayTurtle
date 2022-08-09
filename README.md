@@ -16,130 +16,142 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 * <a href="#square">`Square`</a>
 * <a href="#circle">`Circle`</a>
 * <a href="#color">`Color`</a>
-* <a href="#hide">`Hide `</a>
+* <a href="#hide">`Hide`</a>
 * <a href="#show">`Show`</a>
 * <a href="#begin-fill">`Begin fill`</a>
 * <a href="#end-fill">`End fill`</a>
 * <a href="#bgcolor">`Bgcolor`</a>
 
-
 ### Forward
 
 * Syntax
-    * Command: `forward`
-    * Parameters: `distance`
+  * Command: `forward`
+  * Parameters: `distance`
 * What it does
-    * The `forward` command moves the turtle on the screen, drawing a line behind it.
-    * The `distance` parameter tells the turtle how far to move.
+  * The `forward` command moves the turtle on the screen, drawing a line behind it.
+  * The `distance` parameter tells the turtle how far to move.
 
 ### Back
 
 * Syntax
-    * Command: `back`
-    * Parameters: `distance`
+  * Command: `back`
+  * Parameters: `distance`
 * What it does
-    * The `back` command moves the turtle backward on the screen, drawing a line in front of it.
-    * The `distance` parameter tells the turtle how far to move.
+  * The `back` command moves the turtle backward on the screen, drawing a line in front of it.
+  * The `distance` parameter tells the turtle how far to move.
 
 ### Right
 
 * Syntax
-    * Command: `right`
-    * Parameters: `degrees`
+  * Command: `right`
+  * Parameters: `degrees`
 * What it does
-    * The `right` command turns the turtle right.
-    * The `degrees` parameter tells the turtle how many degrees to rotate.
+  * The `right` command turns the turtle right.
+  * The `degrees` parameter tells the turtle how many degrees to rotate.
 
 ### Left
 
 * Syntax
-    * Command: `left`
-    * Parameters: `degrees`
+  * Command: `left`
+  * Parameters: `degrees`
 * What it does
-    * The `left` command turns the turtle left.
-    * The `degrees` parameter tells the turtle how many degrees to rotate.
-
+  * The `left` command turns the turtle left.
+  * The `degrees` parameter tells the turtle how many degrees to rotate.
 
 ### Speed
 
 * Syntax
-    * Command: `speed`
-    * Parameters: `new-speed`
+  * Command: `speed`
+  * Parameters: `new-speed`
 * What it does
-    * The `speed` command sets the turtles drawing speed.
-    * The `new-speed` parameter tells the turtle how fast it should move.
-
+  * The `speed` command sets the turtles drawing speed.
+  * The `new-speed` parameter tells the turtle how fast it should move.
 
 ### Width
 
 * Syntax
-    * Command: `width`
-    * Parameters: `new-width`
+  * Command: `width`
+  * Parameters: `new-width`
 * What it does
-    * The `width` command sets the turtles width (in pixels).
-    * The `new-width` parameter specifies what the new width of the turtle should be.
-
+  * The `width` command sets the turtles width (in pixels).
+  * The `new-width` parameter specifies what the new width of the turtle should be.
 
 ### Shape
 
 * Syntax
-    * Command: `shape`
-    * Parameters: `new-shape`
+  * Command: `shape`
+  * Parameters: `new-shape`
 * What it does
-    * The `shape` command changes the turtle's shape.
-    * The `new-shape` parameter specifies what shape should be displayed.
+  * The `shape` command changes the turtle's shape.
+  * The `new-shape` parameter specifies what shape should be displayed.
     > Note: The `new-shape` parameter can only be on of the following: arrow, circle, turtle, square, triangle, classic
 
 ### Square
 
 * Syntax
-    * Command: `square`
-    * Parameters: `side-length`
+  * Command: `square`
+  * Parameters: `side-length`
 * What it does
-    * The `square` command draws a square on the screen
-    * The `side-length` parameter determines how long the sides of the square will be
+  * The `square` command draws a square on the screen
+  * The `side-length` parameter determines how long the sides of the square will be
 
 ### Circle
 
 * Syntax
-    * Command: `circle`
-    * Parameters: `radius`
+  * Command: `circle`
+  * Parameters: `radius`
 * What it does
-    * The `circle` command draws a circle on the screen
-    * The `radius` parameter determines how big the circle will be
+  * The `circle` command draws a circle on the screen
+  * The `radius` parameter determines how big the circle will be
 
 ### Color
 
 * Syntax
-    * Command: `color`
-    * Parameters: `new-color`
+  * Command: `color`
+  * Parameters: `new-color`
 * What it does
-    * The `color` command changes the color of the turtle and of the lines it draws
-    * The `new-color` parameter specifies what color to change to
+  * The `color` command changes the color of the turtle and of the lines it draws
+  * The `new-color` parameter specifies what color to change to
     > See a list of all named colors [here](https://trinket.io/docs/colors)
 
 ### Hide
 
-* Syntax: `hide`
-* Hides the turtle. The turtle will continue to draw on the canvas, it just won't be visible
+* Syntax
+  * Command: `hide`
+  * Paramters: none
+* What it does
+  * The `hide` command hides the turtle. It will still draw, it just won't be visible
 
 ### Show
 
-* Syntax: `show`
-* Shows the turtle, if it's hidden. If it's already visible, does nothing.
+* Syntax
+  * Command: `show`
+  * Paramters: none
+* What it does
+  * The `show` command shows the turtle if it's hidden. If it's already visible, it does nothing
 
-###  Begin Fill
+### Begin Fill
 
-* Syntax: `begin-fill`
-* Will fill any shapes drawn with the turtles current color as soon as `end-fill` is called.
+* Syntax
+  * Command: `begin-fill`
+  * Paramters: none
+* What it does
+  * The `begin-fill` command will start the fill process using the current `color`. However, nothing will be filled until `end-fill` is called.
 
 ### End Fill
 
-* Syntax: `end-fill`
-* Fills all shapes drawn in between itself and the `begin-fill` command with the turtles current color.
+* Syntax
+  * Command: `end-fill`
+  * Paramters: none
+* What it does
+  * The `end-fill` command will fill any shapes drawn in between the `begin-fill` command and itself. If there was no `begin-fill` command, `end-fill` will do nothing.
 
 ### Bgcolor
 
-* Syntax: `bgcolor new-color`
-* Changes the background color of the canvas. `new-color` can be a hex code, or one of the named colors supported by turtle.
-    * See a list of all named colors [here](https://trinket.io/docs/colors)
+* Syntax
+  * Command: `bgcolor`
+  * Paramters: `new-color`
+* What it does
+  * The `bgcolor` command changes the background color of the canvas
+  * The `new-color` paramter specifies what color it should change to
+    > See a list of all named colors [here](https://trinket.io/docs/colors)
