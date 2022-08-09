@@ -116,7 +116,7 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 * What it does
     * The `color` command changes the color of the turtle and of the lines it draws
     * The `new-color` parameter specifies what color to change to
-    * > See a list of all named colors [here](https://trinket.io/docs/colors)
+    > See a list of all named colors [here](https://trinket.io/docs/colors)
 
 ### Hide
 
