@@ -90,22 +90,33 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
     * The `new-shape` parameter specifies what shape should be displayed.
     > Note: The `new-shape` parameter can only be on of the following: arrow, circle, turtle, square, triangle, classic
 
-
 ### Square
 
-* Syntax: `square side-length`
-* Draws a `square` where each side is `side-length` pixels long
+* Syntax
+    * Command: `square`
+    * Parameters: `side-length`
+* What it does
+    * The `square` command draws a square on the screen
+    * The `side-length` parameter determines how long the sides of the square will be
 
 ### Circle
 
-* Syntax: `circle radius`
-* Draws a `circle` that has a radius of `radius`. Keep in mind, the radius is half the diameter of the circle.
+* Syntax
+    * Command: `circle`
+    * Parameters: `radius`
+* What it does
+    * The `circle` command draws a circle on the screen
+    * The `radius` parameter determines how big the circle will be
 
 ### Color
 
-* Syntax: `color new-color`
-* Changes the color of the turtle, and the color of all the lines drawn on the screen to the `new-color`. `new-color` can be a hex code, or one of the named colors supported by turtle.
-    * See a list of all named colors [here](https://trinket.io/docs/colors)
+* Syntax
+    * Command: `color`
+    * Parameters: `new-color`
+* What it does
+    * The `color` command changes the color of the turtle and of the lines it draws
+    * The `new-color` parameter specifies what color to change to
+    * > See a list of all named colors [here](https://trinket.io/docs/colors)
 
 ### Hide
 
