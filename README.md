@@ -4,6 +4,18 @@ Play Turtle provides a way for children to learn programming by moving a turtle 
 
 It provides a subset of commands found in Python's Turtle module to abstract away complicated programming ideas.
 
+<details>
+<summary>Table of Contents</summary>
+
+* [Installation](#installation)
+* [Commands](#play-turtle-commands)
+
+</details>
+
+## Installation
+
+There are multiple ways to install Play Turtle
+
 ## Play Turtle Commands
 
 * <a href="#forward">`Forward`</a>
