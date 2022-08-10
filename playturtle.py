@@ -1,5 +1,6 @@
 import turtle
 import tkinter as tk
+import os
 from tkinter import END, ttk
 from tkinter.messagebox import showerror, showinfo
 from tkinter.filedialog import askopenfile, asksaveasfile
@@ -13,7 +14,8 @@ class App:
 
 		self.root = tk.Tk()
 		self.root.title(self.title_str)
-		self.root.iconphoto(True, tk.PhotoImage(file="turtle.png"))
+		if os.path.exists('turtle.png'):
+			self.root.iconphoto(True, tk.PhotoImage(file="turtle.png"))
 
 		self.menubar = tk.Menu(self.root, tearoff=False)
 		self.root.config(menu=self.menubar)
