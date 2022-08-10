@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PlayTurtle"
+version = "1.1.0"
+authors = [
+    {name = "Israel Waldner", email = "imky171@gmail.com"}
+]
+description = "An application that provides a simplified way for children to learn programming"
+readme = "README.md"
+requires-python = ">=3.7"
+keywords = ["python", "turtle", "learn-python"]
+license = {file = "LICENSE"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Education",
+    "Topic :: Education :: Computer Aided Instruction (CAI)"
+]
+
+[project.gui-scripts]
+play-turtle = "main:play"
+
+[project.urls]
+"Homepage" = "https://github.com/mordy-python/PlayTurtle"
+"Bug Tracker" = "https://github.com/mordy-python/PlayTurtle/issues"
