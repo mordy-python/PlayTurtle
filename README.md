@@ -28,7 +28,7 @@ Clone the repo and run locally
 ```sh
 $ git clone https://github.com/mordy-python/PlayTurtle
 $ cd PlayTurtle
-$ python main.py
+$ python playturtle.py
 # Can also install with `pip install .`
 # Will provide the `play-turtle` command 
 ```
