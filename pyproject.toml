@@ -13,7 +13,6 @@ readme = "README.md"
 requires-python = ">=3.7"
 keywords = ["python", "turtle", "learn-python"]
 license = {file = "LICENSE"}
-package-data = {}
 classifiers = [
     "Programming Language :: Python :: 3",
     "Development Status :: 4 - Beta",
@@ -33,4 +32,4 @@ play-turtle = "main:play"
 "Bug Tracker" = "https://github.com/mordy-python/PlayTurtle/issues"
 
 [tool.setuptools]
-inlude-package-data = true
+include-package-data = true
