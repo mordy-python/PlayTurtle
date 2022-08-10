@@ -16,6 +16,22 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 There are multiple ways to install Play Turtle
 
+Via pip
+
+```sh
+$ pip install playturtle
+# Provides the play-turtle command
+```
+
+Clone the repo and run locally
+
+```sh
+$ git clone https://github.com/mordy-python/PlayTurtle
+$ cd PlayTurtle
+$ python main.py
+# can also install with `pip install .`
+```
+
 ## Play Turtle Commands
 
 * <a href="#forward">`Forward`</a>
