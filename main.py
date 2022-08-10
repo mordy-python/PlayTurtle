@@ -177,6 +177,9 @@ class App:
 		else:
 			self.root.title(f"{self.title_str} *")
 
+def play():
+	app = App()
+	app.run_app()
 
-app = App()
-app.run_app()
+if __name__ == "__main__":
+	play()
