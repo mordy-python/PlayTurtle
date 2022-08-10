@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "PlayTurtle"
-version = "1.2.1"
+version = "2.0.0"
 authors = [
     {name = "Israel Waldner", email = "imky171@gmail.com"}
 ]
@@ -25,7 +25,7 @@ classifiers = [
 ]
 
 [project.gui-scripts]
-play-turtle = "main:play"
+play-turtle = "playturtle:play"
 
 [project.urls]
 "Homepage" = "https://github.com/mordy-python/PlayTurtle"
