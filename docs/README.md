@@ -7,6 +7,7 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 * [Installation](#installation)
 * [Commands](#play-turtle-commands)
+* <a href="#installation">Installation</a>
 
 </details>
 
