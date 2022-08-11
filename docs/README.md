@@ -1,5 +1,3 @@
-# Play Turtle
-
 Play Turtle provides a way for children to learn programming by moving a turtle on the screen
 
 It provides a subset of commands found in Python's Turtle module to abstract away complicated programming ideas.
