@@ -14,7 +14,7 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 ## Screenshots
 
-![screenshot](/blob/main/docs/static/blank.png)
+![screenshot](/blob/main/docs/static/blank.jpg)
 
 ## Installation
 
