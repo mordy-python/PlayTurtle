@@ -5,8 +5,10 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 <details>
 <summary>Table of Contents</summary>
 
-<a href="#installation">Installation</a><br>
-<a href="#play-turtle-commands">Commands</a>
+<ul>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#play-turtle-commands">Commands</a></li>
+</ul>
 
 </details>
 
