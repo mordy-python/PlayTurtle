@@ -14,7 +14,7 @@ It provides a subset of commands found in Python's Turtle module to abstract awa
 
 ## Screenshots
 
-![screenshot](/docs/static/blank.jpg)
+![screenshot](https://github.com/mordy-python/PlayTurtle/blob/main/docs/static/blank.jpg)
 
 ## Installation
 
