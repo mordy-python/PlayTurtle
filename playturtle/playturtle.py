@@ -115,8 +115,8 @@ class App:
                 times = self.env.get(times, times)
                 commands = " ".join(func[2:])
                 commands = commands.split(";")
-                for idx, _ in enumerate(commands):
-                    commands[idx] = commands.strip()
+                for idx, command in enumerate(commands):
+                    commands[idx] = command.strip()
                 for _ in range(int(times)):
                     for command in commands:
                         self.execute_command(command[0], command[1])
